@@ -1,4 +1,4 @@
-# amaysim/serverless
+# alexsavio/serverless
 
 [![Serverless Application Framework AWS + Google Cloud Function API Gateway](./assets/serverless-framework.png)](http://serverless.com)
 
@@ -21,7 +21,7 @@ $ make shell
 
 ## Example
 
-`example/apigw` is an example on how to use `amaysim/serverless`.
+`example/apigw` is an example on how to use `alexsavio/serverless`.
 
 ## Update Docker image
 
@@ -33,7 +33,7 @@ $ make shell
 4. Build and test locally (test also the apigw example)
 5. Commit and push the changes
 6. Tag the commit with the command `$ make tag`
-7. Go to [hub.docker.com](https://hub.docker.com/r/amaysim/serverless/)
+7. Go to [hub.docker.com](https://hub.docker.com/r/alexsavio/serverless/)
 8. In `Build Details` tab, you should now see the new tag kicking off
 
 ### Fix for the current version
@@ -42,7 +42,7 @@ $ make shell
 2. Build and test locally (test also the apigw example)
 3. Commit and push the changes
 4. Run `$ make tag`
-5. Go to [hub.docker.com](https://hub.docker.com/r/amaysim/serverless/)
+5. Go to [hub.docker.com](https://hub.docker.com/r/alexsavio/serverless/)
 6. In `Build Details` tab, you should now see build the tag kicking off
 
 ## Docker image
