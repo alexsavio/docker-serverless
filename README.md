@@ -1,6 +1,6 @@
 # amaysim/serverless
 
-[![Serverless Application Framework AWS Lambda API Gateway](./assets/serverless-framework.png)](http://serverless.com)
+[![Serverless Application Framework AWS + Google Cloud Function API Gateway](./assets/serverless-framework.png)](http://serverless.com)
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
@@ -49,8 +49,9 @@ $ make shell
 
 The Docker image has the following:
 
-- Node 8.12 (Alpine): we leverage Babel to be compatible with AWS Lambda runtime
-- [Serverless Framework v1.30.3](https://serverless.com/framework/)
+- Node 8.15 (Alpine): we leverage Babel to be compatible with AWS Lambda runtime
+- [Serverless Framework](https://serverless.com/framework/)
 - [yarn](https://github.com/yarnpkg/yarn)
 - zip: handy to zip your own serverless artefact
 - [AWS CLI](https://github.com/aws/aws-cli): required by some Serverless plug-ins to work
+- [GCloud CLI](https://cloud.google.com/sdk/docs/#linux): required by some Serverless plug-ins to work
