@@ -1,6 +1,6 @@
 # alexsavio/serverless
 
-[![Serverless Application Framework AWS + Google Cloud Function API Gateway](./assets/serverless-framework.png)](http://serverless.com)
+[![Serverless Application Framework AWS + API Gateway](./assets/serverless-framework.png)](http://serverless.com)
 
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 
@@ -54,4 +54,3 @@ The Docker image has the following:
 - [yarn](https://github.com/yarnpkg/yarn)
 - zip: handy to zip your own serverless artifact
 - [AWS CLI](https://github.com/aws/aws-cli): required by some Serverless plug-ins to work
-- [GCloud CLI](https://cloud.google.com/sdk/docs/#linux): required by some Serverless plug-ins to work
