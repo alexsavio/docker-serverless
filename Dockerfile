@@ -5,7 +5,7 @@ ARG SHA256SUM=df3834e538025b257b7cc5d6e7518ca16f05e99aa82671dda19045e688b5268a
 ARG SERVERLESS_VERSION=1.46.1
 
 RUN apk --no-cache add python python3 python3-dev py-pip ca-certificates groff less bash make jq curl wget g++ zip git openssh && \
-    apk --no-cache add libffi libffi-dev && \
+    apk --no-cache add libffi libffi-dev openssl-dev && \
     pip --no-cache-dir install awscli && \
     rm -rf /var/cache/apk/* && \
     update-ca-certificates
