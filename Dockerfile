@@ -1,8 +1,8 @@
-FROM node:8.15-alpine
+FROM node:8.16-alpine
 
 ARG CLOUD_SDK_VERSION=229.0.0
 ARG SHA256SUM=b1c87fc9451598a76cf66978dd8aa06482bfced639b56cf31559dc2c7f8b7b90
-ARG SERVERLESS_VERSION=1.35.1
+ARG SERVERLESS_VERSION=1.46.1
 
 RUN apk --no-cache add python python3 python3-dev py-pip ca-certificates groff less bash make jq curl wget g++ zip git openssh && \
     pip --no-cache-dir install awscli && \
@@ -15,12 +15,12 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
     rm -f glibc-2.25-r0.apk
 
 RUN mkdir -p /tmp/yarn && \
-    mkdir -p /opt/yarn/dist && \
-    cd /tmp/yarn && \
-    wget -q https://yarnpkg.com/latest.tar.gz && \
-    tar zvxf latest.tar.gz && \
-    find /tmp/yarn -maxdepth 2 -mindepth 2 -exec mv {} /opt/yarn/dist/ \; && \
-    rm -rf /tmp/yarn
+  mkdir -p /opt/yarn/dist && \
+  cd /tmp/yarn && \
+  wget -q https://yarnpkg.com/latest.tar.gz && \
+  tar zvxf latest.tar.gz && \
+  find /tmp/yarn -maxdepth 2 -mindepth 2 -exec mv {} /opt/yarn/dist/ \; && \
+  rm -rf /tmp/yarn
 
 RUN ln -sf /opt/yarn/dist/bin/yarn /usr/local/bin/yarn && \
     ln -sf /opt/yarn/dist/bin/yarn /usr/local/bin/yarnpkg && \

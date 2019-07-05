@@ -49,9 +49,9 @@ $ make shell
 
 The Docker image has the following:
 
-- Node 8.15 (Alpine): we leverage Babel to be compatible with AWS Lambda runtime
+- Node 8.16 (Alpine): we leverage Babel to be compatible with AWS Lambda runtime
 - [Serverless Framework](https://serverless.com/framework/)
 - [yarn](https://github.com/yarnpkg/yarn)
-- zip: handy to zip your own serverless artefact
+- zip: handy to zip your own serverless artifact
 - [AWS CLI](https://github.com/aws/aws-cli): required by some Serverless plug-ins to work
 - [GCloud CLI](https://cloud.google.com/sdk/docs/#linux): required by some Serverless plug-ins to work
