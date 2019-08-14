@@ -12,7 +12,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
     apk add glibc-2.25-r0.apk && \
     rm -f glibc-2.25-r0.apk
 
-RUN apk --no-cache add docker && \
+RUN apk --no-cache add openrc docker && \
     rc-update add docker boot
 
 RUN mkdir -p /tmp/yarn && \
