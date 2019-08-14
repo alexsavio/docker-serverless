@@ -1,6 +1,6 @@
 FROM node:8.16-alpine
 
-ARG SERVERLESS_VERSION=1.46.1
+ARG SERVERLESS_VERSION=1.49.0
 
 RUN apk --no-cache add python python3 python3-dev py-pip ca-certificates groff less bash make jq curl wget g++ zip git openssh && \
     pip --no-cache-dir install awscli && \
