@@ -3,7 +3,7 @@ FROM node:14.2-alpine3.11
 ARG SERVERLESS_VERSION=1.70.0
 ARG GLIBC_VERSION=2.31-r0
 
-RUN apk --no-cache add python3 python3-dev ca-certificates groff less bash make jq curl wget g++ zip git openssh llvm-dev libffi-dev && \
+RUN apk --no-cache add python3 python3-dev ca-certificates groff less bash make jq curl wget g++ zip git openssh && \
     python3 -m pip --no-cache-dir install awscli && \
     rm -rf /var/cache/apk/* && \
     update-ca-certificates && \
