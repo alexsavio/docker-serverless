@@ -6,7 +6,9 @@ ARG GLIBC_VERSION=2.31-r0
 RUN apk --no-cache add python3 python3-dev ca-certificates groff less bash make jq curl wget g++ zip git openssh llvm-dev libffi-dev && \
     python3 -m pip --no-cache-dir install awscli && \
     rm -rf /var/cache/apk/* && \
-    update-ca-certificates
+    update-ca-certificates && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
+    ln -s /usr/bin/pip3 /usr/bin/pip
 
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk && \
@@ -17,12 +19,12 @@ RUN apk --no-cache add openrc docker && \
     rc-update add docker boot
 
 RUN mkdir -p /tmp/yarn && \
-  mkdir -p /opt/yarn/dist && \
-  cd /tmp/yarn && \
-  wget -q https://yarnpkg.com/latest.tar.gz && \
-  tar zvxf latest.tar.gz && \
-  find /tmp/yarn -maxdepth 2 -mindepth 2 -exec mv {} /opt/yarn/dist/ \; && \
-  rm -rf /tmp/yarn
+    mkdir -p /opt/yarn/dist && \
+    cd /tmp/yarn && \
+    wget -q https://yarnpkg.com/latest.tar.gz && \
+    tar zvxf latest.tar.gz && \
+    find /tmp/yarn -maxdepth 2 -mindepth 2 -exec mv {} /opt/yarn/dist/ \; && \
+    rm -rf /tmp/yarn
 
 RUN ln -sf /opt/yarn/dist/bin/yarn /usr/local/bin/yarn && \
     ln -sf /opt/yarn/dist/bin/yarn /usr/local/bin/yarnpkg && \
